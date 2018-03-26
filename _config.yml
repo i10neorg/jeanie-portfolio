@@ -1,6 +1,6 @@
 # Site Settings
 title: Jeanie Barker Portfolio
-url: 'https://i10neorg.github.io/jeanie-portfolio'
+url: 'https://i10neorg.github.io'
 baseurl: '/jeanie-portfolio' #change it according to your repository name
 #about: True # set to False or comment line if you want to remove the "How to use?" in the sidebar
 
