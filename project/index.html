@@ -1,0 +1,12 @@
+---
+# List Jekyll collection, _project
+---
+{% if site.project %}
+<ul>
+{% for project in site.project %}
+<li><a href="{{ project.url }}">{{ project.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+<p><em>There are no projects.</em></p>
+{% endif %}
