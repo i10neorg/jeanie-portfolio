@@ -1,4 +1,4 @@
-site.title: Jeanie Barker
+title: Jeanie Barker  # Used in html title
 
 defaults:
   -
