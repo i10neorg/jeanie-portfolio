@@ -10,7 +10,7 @@ defaults:
     scope:
       path: ""
       type: project
-     values:
+    values:
       layout: project
 
 collections:
