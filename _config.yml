@@ -1,13 +1,15 @@
 title: Jeanie Barker  # Used in html title and site header
 
 defaults:
-  - scope:
+  -
+    scope:
       path: ""
     values:
       layout: default
-  - scope:
-       path: ""
-       type: project
+  -
+    scope:
+      path: ""
+      type: project
      values:
       layout: project
 
