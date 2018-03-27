@@ -1,4 +1,7 @@
-theme: minima
+theme: jekyll-theme-minimal
+
+site:
+  title: Jeanie Barker
 
 defaults:
   -
