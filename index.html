@@ -1,3 +1,9 @@
 ---
 ---
-This is a test of _laouts/default ! ☺
+<p>This is a test of _laouts/default ! ☺</p>
+<p>Can I list the projects in the Jekyll collection, "project"?</p>
+<ul>
+{% for project in site.project %}
+  <li>{{ project.url }}</li>
+{% endfor %}
+</ul>
