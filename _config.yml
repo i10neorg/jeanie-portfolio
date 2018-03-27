@@ -12,4 +12,5 @@ defaults:
       layout: project
 
 collections:
-  - project
+  project:
+    output: true
