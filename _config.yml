@@ -1,5 +1,4 @@
-site:
-  title: Jeanie Barker
+site.title: Jeanie Barker
 
 defaults:
   -
