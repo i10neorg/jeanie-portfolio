@@ -36,8 +36,8 @@ max-width: 100%;
 <nav>
 <p>site.project: {{ site.project }}</p>
 <ul>
-{% foreach project in site.project %}
+{% for project in site.project %}
 <li>{{ project }}</li>
-{% endforeach %}
+{% endfor %}
 </ul>
 </nav>
