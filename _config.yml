@@ -6,12 +6,12 @@ defaults:
       path: ""
     values:
       layout: default
-#  -
-#    scope:
-#      path: ""
-#      type: project
-#    values:
-#      layout: project
+  -
+    scope:
+      path: ""
+      type: project
+    values:
+      layout: project
 
 collections:
   project:
