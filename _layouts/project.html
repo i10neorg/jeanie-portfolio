@@ -17,7 +17,19 @@ max-width: 100%;
 }
 </style>
 
-<div>
+{%- if page.collection.size > 1 -%}
+<nav>
+	<ul>
+{%- for project in site.project -%}
+	{%- if project.url == page.url %}
+	{%- if not forloop.first -%}<li><a href="">site.project[forloop.index0 - 1].title</a></li>{%- endif -%}
+	{%- if not forloop.last -%}<li><a href="">site.project[forloop.index0 + 1].title</a></li>{%- endif -%}
+	{%- enif %}
+{%- endfor -%}
+	</ul>
+</nav>
+{%- endif -%}
+
 <header>
 	<h2{% if page.graphic %}style="background: url("{{ site.baseurl }}{{ page.graphic }}");"{% endif %}>{{ page.title }}</h2>
 </header>
@@ -31,20 +43,3 @@ max-width: 100%;
 {%- endfor -%}
 </ul>
 {% endif %}
-</div>
-
-
-
-{% if site.project.size > 1 %}
-<nav>
-<ul>
-{%- for project in site.project -%}
-<li>
-	{%- if project.url != page.url -%}<a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
-	{%- else -%}{{ project.title }}
-	{%- endif -%}
-</li>
-{% endfor %}
-</ul>
-</nav>
-{%- endif -%}

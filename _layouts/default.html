@@ -10,11 +10,17 @@
     <ul>
       <li><a href="{{ site.baseurl }}">Home</a></li>
       <li><a href="{{ site.baseurl }}/projects">Projects</a>
-	      {%- if page.collection == "project" -%}
-	      <ul>
-		      <li>This page is project!</li>
-	      </ul>
-	      {%- endif -%}
+		{%- comment %} If a project page, list projects {%- endcomment -%}
+		{%- if page.collection == "project" -%}
+			{%- for project in site.project -%}
+				<li>
+				{%- comment -%} Don't link if we're on the project page {%- endcomment -%}
+        			{%- if page.url != project.url -%}<a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+        			{%- else -%}{{ project.title }}
+        			{%- endif -%}
+				</li>
+			{%- endfor -%}
+		{%- endif -%}
       </li>
     </ul>
   </nav>
