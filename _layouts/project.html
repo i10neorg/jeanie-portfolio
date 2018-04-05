@@ -1,12 +1,24 @@
 ---
 layout: default
 ---
+<style>
+ul.images {
+margin: 0;
+padding: 0;
+}
+ul.images > li {
+display: block;
+}
+</style>
+
 <header>
-	<h2 style="background: url("{{ site.baseurl }}{{ page.graphic }}");">{{ page.title }}</h2>
+	<h2{% if page.graphic %}style="background: url("{{ site.baseurl }}{{ page.graphic }}");"{% endif %}>{{ page.title }}</h2>
 </header>
+
 {{ content }}
+
 {% if page.images %}
-<ul>
+<ul class="images">
 {% for image in page.images %}
 <li><img src="{{ image }}"/></li>
 {% endfor %}
