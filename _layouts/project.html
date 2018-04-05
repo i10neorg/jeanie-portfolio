@@ -22,8 +22,8 @@ max-width: 100%;
 	<ul>
 {%- for project in site.project -%}
 	{%- if project.url == page.url %}
-	{%- if forloop.first == false -%}<li><a href="">site.project[forloop.index0 - 1].title</a></li>{%- endif -%}
-	{%- if forloop.last == false -%}<li><a href="">site.project[forloop.index0 + 1].title</a></li>{%- endif -%}
+	{%- unless forloop.first -%}<li><a href="">site.project[forloop.index0 - 1].title</a></li>{%- endunless -%}
+	{%- unless forloop.last -%}<li><a href="">site.project[forloop.index0 + 1].title</a></li>{%- endunless -%}
 	{%- endif %}
 {%- endfor -%}
 	</ul>
