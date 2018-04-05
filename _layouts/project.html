@@ -17,6 +17,7 @@ max-width: 100%;
 }
 </style>
 
+<div>
 <header>
 	<h2{% if page.graphic %}style="background: url("{{ site.baseurl }}{{ page.graphic }}");"{% endif %}>{{ page.title }}</h2>
 </header>
@@ -30,3 +31,13 @@ max-width: 100%;
 {% endfor %}
 </ul>
 {% endif %}
+</div>
+
+<nav>
+<p>site.project: {{ site.project }}</p>
+<ul>
+{% foreach project in site.project %}
+<li>{{ project }}</li>
+{% endforeach %}
+</ul>
+</nav>
