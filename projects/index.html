@@ -4,7 +4,7 @@
 {% if site.project %}
 <ul>
 {% for project in site.project %}
-<li><a href="{% link project.url %}">{{ project.title }}</a></li>
+<li><a href="{% link {{ project.url }} %}">{{ project.title }}</a></li>
 {% endfor %}
 </ul>
 {% else %}
