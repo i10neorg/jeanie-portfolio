@@ -33,11 +33,17 @@ max-width: 100%;
 {% endif %}
 </div>
 
+
+
 {% if site.project.size > 1 %}
 <nav>
 <ul>
 {%- for project in site.project -%}
-<li><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
+<li>
+	{%- if project.url != page.url -%}<a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+	{%- else -%}{{ project.title }}
+	{%- endif -%}
+</li>
 {% endfor %}
 </ul>
 </nav>
