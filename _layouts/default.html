@@ -9,7 +9,13 @@
   <nav>
     <ul>
       <li><a href="{{ site.baseurl }}">Home</a></li>
-      <li><a href="{{ site.baseurl }}/projects">Projects</a></li>
+      <li><a href="{{ site.baseurl }}/projects">Projects</a>
+	      {%- if page.collection = "project" -%}
+	      <ul>
+		      <li>This page is project!</li>
+	      </ul>
+	      {%- endif -%}
+      </li>
     </ul>
   </nav>
   </header>
