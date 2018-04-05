@@ -1,9 +1,10 @@
 ---
+# List _project Jekyll collection
 ---
 {% if site.project %}
 <ul>
 {% for project in site.project %}
-<li><a href="{% project.url %}">{{ project.title }}</a></li>
+<li><a href="{{ project.url }}">{{ project.title }}</a></li>
 {% endfor %}
 </ul>
 {% else %}
