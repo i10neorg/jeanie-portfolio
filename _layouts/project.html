@@ -1,5 +1,14 @@
 ---
 layout: default
 ---
-THIS IS THE PROJECT LAYOUT
+<header>
+	<h2 style="background: url("{{ site.baseurl }}{{ page.graphic }}");">{{ page.title }}</h2>
+</header>
 {{ content }}
+{% if page.images %}
+<ul>
+{% for image in page.images %}
+<li><img src="{{ image }}"/></li>
+{% enfor %}
+</ul>
+{% endif %}
