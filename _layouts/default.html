@@ -12,6 +12,7 @@
       <li><a href="{{ site.baseurl }}/projects">Projects</a>
 		{%- comment %} If a project page, list projects {%- endcomment -%}
 		{%- if page.collection == "project" -%}
+			<ul>
 			{%- for project in site.project -%}
 				<li>
 				{%- comment -%} Don't link if we're on the project page {%- endcomment -%}
@@ -20,6 +21,7 @@
         			{%- endif -%}
 				</li>
 			{%- endfor -%}
+			</li>
 		{%- endif -%}
       </li>
     </ul>
