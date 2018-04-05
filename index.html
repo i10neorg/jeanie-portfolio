@@ -4,6 +4,8 @@
 <p>Can I list the projects in the Jekyll collection, "project"?</p>
 <ul>
 {% for project in site.project %}
-  <li><a href="{% link project.url %}">{{ project }}</a></li>
+{% comment %}
+<li><a href="{% link project.url %}">{{ project }}</a></li>
+{% endcomment %}
 {% endfor %}
 </ul>
