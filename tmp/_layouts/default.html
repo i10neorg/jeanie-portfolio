@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+</head>
+<body>
+  <header>
+  <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+  <nav>
+    <ul>
+      <li>First menu</li>
+      <li>Another menu link</li>
+    </ul>
+  </nav>
+  </header>
+  <main>
+{{ content }}
+  </main>
+</body>
+</html>
