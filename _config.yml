@@ -13,6 +13,6 @@ defaults:
 #    values:
 #      layout: project
 
-#collections:
-#  project:
-#    output: true
+collections:
+  project:
+    output: true
