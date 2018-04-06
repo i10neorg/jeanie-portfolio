@@ -15,7 +15,7 @@ margin: 0;
 padding: 0;
 }
 ul.nav-main li:before {
-content: "\20• ";
+content: "\a0• ";
 }
 ul.nav-main li:first-child:before {
 content: "";
@@ -29,8 +29,7 @@ ul.nav-main > li a {
   <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
   <nav>
     <ul class="nav-main">
-      <li><a href="{{ site.baseurl }}">Home</a></li>
-      <li><a href="{{ site.baseurl }}/projects">Projects</a>
+      <li><a href="{{ site.baseurl }}">Home</a></li><li><a href="{{ site.baseurl }}/projects">Projects</a>
 		{%- comment %} If a project page, list projects {%- endcomment -%}
 		{%- if page.collection == "project" -%}
 			<ul>
