@@ -22,8 +22,8 @@ max-width: 100%;
 	<ul>
 {%- for project in site.project -%}
 	{%- if project.url == page.url %}
-		{%- unless forloop.last -%}{% assign i = forloop.index0 | plus: 1 -%}<li><a href="{{ site.baseurl}}{{ site.project[i].url }}">Next</a></li>{%- endunless -%}
-		{%- unless forloop.first -%}{% assign i = forloop.index0 | minus: 1 -%}<li><a href="{{ site.baseurl}}{{ site.project[i].url }}">Previous</a></li>{%- endunless -%}
+	<li>{%- unless forloop.last -%}{% assign i = forloop.index0 | plus: 1 -%}<a href="{{ site.baseurl}}{{ site.project[i].url }}">Next</a>{%- else -%}Next{%- endunless -%}</li>
+	<li>{%- unless forloop.first -%}{% assign i = forloop.index0 | minus: 1 -%}<a href="{{ site.baseurl}}{{ site.project[i].url }}">Previous</a>{%- else -%}Previous{%- endunless -%}</li>
 	{%- endif %}
 {%- endfor -%}
 	</ul>
