@@ -7,11 +7,17 @@ ul.nav-main {
 margin: 0;
 padding: 0;
 }
-ul.nav-main > li {
+ul.nav-main li {
 display: inline-block;
 vertical-align: top;
 margin: 0;
 padding: 0;
+}
+ul.nav-main li:before {
+content: " • ";
+}
+ul.nav-main li:first-child:before {
+content: "";
 }
 ul.nav-main > li a {
 }
