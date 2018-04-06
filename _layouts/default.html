@@ -8,13 +8,15 @@
 @media (max-width: 72em) {
 
 input#nav-main {
-position: absolute;
-left: -999px;
+opacity: 0.5;
 }
-input + label:before {
+input + label {
+font-size: 200%;
+}
+input + label::before {
 content: "☰";
 }
-input:checked + label:before {
+input:checked + label::before {
 content: "🗙";
 }
 ul.nav-main {
@@ -24,6 +26,9 @@ ul.nav-main ul {
 padding-left: 1em;
 }
 ul.nav-main li {
+display: block;
+}
+ul.nav-main li a {
 display: block;
 }
 
