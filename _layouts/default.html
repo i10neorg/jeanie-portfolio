@@ -2,12 +2,25 @@
 <html>
 <head>
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+<style>
+ul.nav-main {
+margin: 0;
+padding: 0;
+}
+ul.nav-main > li {
+display: inline-block;
+margin: 0;
+padding: 0;
+}
+ul.nav-main > li a {
+}
+</style>
 </head>
 <body>
   <header>
   <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
   <nav>
-    <ul>
+    <ul class="nav-main">
       <li><a href="{{ site.baseurl }}">Home</a></li>
       <li><a href="{{ site.baseurl }}/projects">Projects</a>
 		{%- comment %} If a project page, list projects {%- endcomment -%}
