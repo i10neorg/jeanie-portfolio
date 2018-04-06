@@ -4,6 +4,23 @@
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 <style>
+
+@media (max-width: 72em) {
+
+ul.nav-main {
+padding: 0;
+}
+ul.nav-main ul {
+padding-left: 1em;
+}
+ul.nav-main li {
+display: block;
+}
+
+}
+
+@media (min-width: 72em) {
+
 ul.nav-main , ul.nav-main ul {
 display: inline-block;
 margin: 0;
@@ -26,6 +43,9 @@ content: "";
 }
 ul.nav-main > li a {
 }
+
+}
+
 </style>
 </head>
 <body>
