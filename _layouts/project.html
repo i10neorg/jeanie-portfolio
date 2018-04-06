@@ -20,10 +20,10 @@ max-width: 100%;
 {%- if page.collection.size > 1 -%}
 <nav>
 	<ul>
-{%- for project in site.project -%}
-	{%- if project.url == page.url %}
-	<li>{%- unless forloop.last -%}{% assign i = forloop.index0 | plus: 1 -%}<a href="{{ site.baseurl}}{{ site.project[i].url }}">Next</a>{%- else -%}Next{%- endunless -%}</li>
-	<li>{%- unless forloop.first -%}{% assign i = forloop.index0 | minus: 1 -%}<a href="{{ site.baseurl}}{{ site.project[i].url }}">Previous</a>{%- else -%}Previous{%- endunless -%}</li>
+{%- for item in page.collection -%}
+	{%- if item.url == page.url %}
+	<li>{%- unless forloop.last -%}{% assign i = forloop.index0 | plus: 1 -%}<a href="{{ site.baseurl}}{{ page.collection[i].url }}">Next</a>{%- else -%}Next{%- endunless -%}</li>
+	<li>{%- unless forloop.first -%}{% assign i = forloop.index0 | minus: 1 -%}<a href="{{ site.baseurl}}{{ page.collection[i].url }}">Previous</a>{%- else -%}Previous{%- endunless -%}</li>
 	{%- endif %}
 {%- endfor -%}
 	</ul>
