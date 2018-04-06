@@ -22,8 +22,8 @@ max-width: 100%;
 	<ul>
 {%- for project in site.project -%}
 	{%- if project.url == page.url %}
-	{%- unless forloop.first -%}<li><a href="">Next</a></li>{%- endunless -%}
-	{%- unless forloop.last -%}<li><a href="">Previous</a></li>{%- endunless -%}
+	{%- unless forloop.first -%}<li><a href="{{ site.baseurl}}{{ site.project[1].url }}">Next</a></li>{%- endunless -%}
+	{%- unless forloop.last -%}<li><a href="{{ site.baseurl}}{{ site.project[1].url }}">Previous</a></li>{%- endunless -%}
 	{%- endif %}
 {%- endfor -%}
 	</ul>
