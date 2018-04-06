@@ -19,6 +19,7 @@ max-width: 100%;
 
 {%- if page.collection.size > 1 -%}
 <nav>
+	<strong>{{ capture page.collection }}</strong>
 	<ul>
 {%- for item in page.collection -%}
 	{%- if item.url == page.url %}
